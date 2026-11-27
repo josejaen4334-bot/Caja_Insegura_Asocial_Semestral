@@ -1,18 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caja Insegura Asocial</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar sesión · Clínica CIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css">
 </head>
-<body>
-    <nav class="nav-bar">
-        <div>
-            <a href="">
-                <img>
-                <span>Caja Insegura Asocial</span>
-            </a>
-        </div>
-    </nav>
+<body class="login-bg">
+  <main class="card">
+    <div class="logo" aria-hidden="true">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#0E6F6E" stroke-width="2.4" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg>
+    </div>
+
+    <div class="titulo">
+      <span class="marca">Clínica CIA</span>
+      <h1>Iniciar sesión</h1>
+    </div>
+
+    <div id="mensaje" class="alerta" role="alert" hidden></div>
+
+    <form id="formLogin" novalidate>
+      <div class="campo">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" class="entrada" type="text" placeholder="Ej. admin" autocomplete="username">
+        <small class="error" id="errUsuario" hidden>Ingresa tu usuario.</small>
+      </div>
+
+      <div class="campo">
+        <label for="clave">Contraseña</label>
+        <input id="clave" class="entrada" type="password" placeholder="Ingresa tu contraseña" autocomplete="current-password">
+        <small class="error" id="errClave" hidden>Ingresa tu contraseña.</small>
+      </div>
+
+      <div class="campo">
+        <label for="rol">Rol</label>
+        <select id="rol" class="entrada">
+          <option>Admin</option>
+          <option>Medico</option>
+          <option>Paciente</option>
+        </select>
+      </div>
+
+      <button id="btnIngresar" class="boton" type="submit">Ingresar</button>
+    </form>
+
+    <p class="ayuda">¿Problemas para entrar? Pide ayuda al administrador.</p>
+  </main>
+
 </body>
 </html>
