@@ -1,0 +1,103 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 96px 16px 48px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #FFFFFF;
+}
+
+/* Imagen de fondo a pantalla completa */
+.login-bg {
+  background: url(/img/fondo-login-clinica.jpg);
+}
+
+/* Tarjeta translúcida centrada */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 68px 40px 36px;
+  border-radius: 18px;
+  background: rgba(8, 36, 37, 0.72);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 20px 48px rgba(3, 25, 26, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Logo circular que sobresale arriba */
+.logo {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  margin-left: -48px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(3, 25, 26, 0.3);
+}
+
+.titulo { text-align: center; display: flex; flex-direction: column; gap: 4px; }
+.marca { font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: #BFEDE8; }
+h1 { margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 28px; }
+
+form { display: flex; flex-direction: column; gap: 18px; }
+.campo { display: flex; flex-direction: column; gap: 2px; }
+label { font-size: 14px; font-weight: 600; }
+
+/* Campos con solo línea inferior */
+.entrada {
+  width: 100%;
+  height: 44px;
+  padding: 0 2px;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 3px;
+  background: transparent;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 15px;
+}
+.entrada::placeholder { color: #DCEBEA; opacity: 1; }
+.entrada:focus { outline: 2px solid #7FD6CF; outline-offset: 3px; }
+.entrada option { color: #10282A; background: #FFFFFF; }
+.entrada.invalido { border-bottom: 2px solid #FF9C8A; }
+
+.error { color: #FFB8AA; font-size: 13px; margin-top: 4px; }
+
+/* Botón en forma de píldora */
+.boton {
+  height: 48px;
+  margin-top: 4px;
+  border: 0;
+  border-radius: 999px;
+  background: #2FB5AE;
+  color: #062F30;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.boton:hover { background: #4CC8C1; }
+.boton:disabled { opacity: 0.6; cursor: wait; }
+
+.alerta {
+  background: #FDEBE6;
+  color: #8E2A17;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.ayuda { margin: 0; text-align: center; font-size: 13px; line-height: 1.5; color: #DCEBEA; }
